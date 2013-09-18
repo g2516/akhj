@@ -1,0 +1,16 @@
+/* 
+    Document   : styles
+    Created on : 10.9.2013, 22:29:27
+    Author     : Mikko
+    Description:
+        Ulkoasun päätyylit
+*/
+
+root { 
+    display: block;
+}
+
+.error {
+    color: red;
+}
+

@@ -1,0 +1,33 @@
+<?php
+/**
+ * Auton kulujen seurantajärjestelmä
+ *
+ * Kirjautumissivun ulkoasu
+ *
+ * @author Mikko Rainio
+ */
+
+?>
+<form method="POST" action="<?php echo $this->urlHelper("login") ?>">
+    <table>
+        <tr>
+            <th colspan="2">Kirjaudu</th>
+        </tr>
+        <?php if (isset($error)) : ?>
+        <tr>
+            <td colspan="2" class="error"><?php echo $error ?></td>
+        </tr>
+        <?php endif; ?>
+        <tr>
+            <th>Käyttäjätunnus:</th>
+            <td><input type="email" name="email" /></td>
+        </tr>
+        <tr>
+            <th>Salasana:</th>
+            <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Kirjaudu" name="submit" /></td>
+        </tr>
+    </table>
+</form>

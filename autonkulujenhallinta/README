@@ -1,0 +1,32 @@
+Tietokannan asennus:
+    CREATE DATABASE  `akhj` ;
+
+    CREATE USER 'akhj'@'localhost' IDENTIFIED BY  'Salakala1';
+
+    GRANT USAGE ON * . * TO  'akhj'@'localhost' IDENTIFIED BY  'Salakala1' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
+
+    GRANT ALL PRIVILEGES ON  `akhj` . * TO  'akhj'@'localhost';
+
+
+Apache virtual hostin määritys:
+    <VirtualHost *:80>
+            ServerName akhj.dev
+            SetEnv APPLICATION_ENV "development"
+            AddDefaultCharset utf-8
+            DocumentRoot /path/to/akhj/public
+            <Directory /path/to/akhj/public>
+                    Options -Indexes
+                    AllowOverride All
+                    Order allow,deny
+                    Allow from all
+            </Directory>
+    </VirtualHost>
+
+Doctrinen command-line tool ohje:
+http://docs.doctrine-project.org/en/latest/reference/tools.html
+
+Entityn annotaatioiden ohje:
+https://doctrine-orm.readthedocs.org/en/latest/reference/annotations-reference.html
+
+Composerin asennus ja käyttöohje:
+http://getcomposer.org/doc/00-intro.md

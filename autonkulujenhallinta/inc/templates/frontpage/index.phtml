@@ -1,0 +1,32 @@
+<?php
+/**
+ * Auton kulujen seurantajärjestelmä
+ *
+ * Etusivun ulkoasu-template
+ *
+ * @author Mikko Rainio
+ */
+?>
+<form method="POST" action="<?php echo $this->urlHelper("index", "edit") ?>">
+    <input type="hidden" name="id" value="<?php echo $user->getId() ?>" />
+    
+    <table>
+        <tr>
+            <th>Email:</th>
+            <td><input type="email" name="email" value="<?php echo $user->getEmail() ?>" /></td>
+        </tr>
+        <tr>
+            <th>Etunimi:</th>
+            <td><input type="text" name="firstname" value="<?php echo $user->getFirstname() ?>" /></td>
+        </tr>
+        <tr>
+            <th>Sukunimi:</th>
+            <td><input type="text" name="lastname" value="<?php echo $user->getLastname() ?>" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Tallenna" name="submit" />
+            </td>
+        </tr>
+    </table>
+</form>

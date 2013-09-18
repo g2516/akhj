@@ -1,0 +1,32 @@
+<?php
+/**
+ * Auton kulujen seurantajärjestelmä
+ *
+ * Virhesivun ulkoasu-template
+ *
+ * @author Mikko Rainio
+ */
+?><!DOCTYPE html>
+<html lang="fi">
+<head>
+    <title><?php echo isset($title) ? $title . " - " : "" ?>Auton kulujen seurantajärjestelmä</title>
+
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css" />
+</head>
+<body>
+    <?php if (\Akhj\Service\UserService::hasIdentity()) : ?>
+        <div><a href="<?php echo $this->urlHelper("login", "logout") ?>">Kirjaudu ulos</a></div>
+    <?php endif ?>
+        
+    <div id="content">
+        <?php
+        /**
+         * Sivun ulkoasu
+         */
+        include($this->getTemplate());
+        ?>
+    </div>
+</body>
+</html>

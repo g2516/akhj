@@ -1,0 +1,15 @@
+<?php
+/**
+ * Auton kulujen seurantajärjestelmä
+ *
+ * Virhesivun ulkoasu-template
+ *
+ * @author Mikko Rainio
+ */
+?>
+
+<h1>Järjestelmässä tapahtui virhe!</h1>
+<b>Poikkeus: <?php echo get_class($e) ?></b><br />
+<b>Virheviesti:</b> <b style="font-size: large; color: #e09508;"><?php echo htmlentities($e->getMessage(), null, "utf-8") ?></b><br />
+Tiedostossa <?php echo $e->getFile() ?>(<?php echo $e->getLine() ?>)<br />
+<pre><?php echo $e->getTraceAsString() ?></pre>

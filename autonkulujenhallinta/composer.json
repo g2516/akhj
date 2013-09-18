@@ -1,0 +1,21 @@
+{
+    "name": "akhj/akhj",
+    "description": "Auton kulujen hallinta",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Mikko Rainio",
+            "email": "mikko.rainio@gmail.com"
+        },
+        {
+            "name": "Samuli Sivula",
+            "email": "samuli.sivula@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "*"
+    },
+    "autoload": {
+        "psr-0": {"Akhj\\": "inc/src/"}
+    }
+}
